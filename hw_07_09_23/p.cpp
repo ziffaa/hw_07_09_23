@@ -26,11 +26,11 @@ Contact::Contact()
 	mobileNumber = nullptr;
 };
 
-Contact::Contact(const char* fn = nullptr, const char* sn = nullptr, const char* tn = nullptr, const char* wn = nullptr, const char* hn = nullptr, const char* mn = nullptr)
+Contact::Contact(const char* fn, const char* sn, const char* tn, const char* wn, const char* hn, const char* mn)
 {
 	setFirstName(fn);
-	setFirstName(sn);
-	setFirstName(tn);
+	setSecondName(sn);
+	setThirdName(tn);
 	setWorkNumber(wn);
 	setHomeNumber(hn);
 	setMobileNumber(mn);

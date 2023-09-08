@@ -16,6 +16,7 @@ class Contact
 public:
 	Contact();
 	~Contact();
+	Contact(const char*, const char*, const char*, const char*, const char*, const char*);
 	void inputInfo();
 	void print();
 	void setFirstName(const char*);

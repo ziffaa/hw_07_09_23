@@ -26,6 +26,16 @@ Contact::Contact()
 	mobileNumber = nullptr;
 };
 
+Contact::Contact(const char* fn = nullptr, const char* sn = nullptr, const char* tn = nullptr, const char* wn = nullptr, const char* hn = nullptr, const char* mn = nullptr)
+{
+	setFirstName(fn);
+	setFirstName(sn);
+	setFirstName(tn);
+	setWorkNumber(wn);
+	setHomeNumber(hn);
+	setMobileNumber(mn);
+}
+
 void Contact::inputInfo()
 {
 	char buff[100];
@@ -220,17 +230,18 @@ void nameSearch()
 	char thirdName[100];
 	cout << "\nEnter first name: ";
 	cin >> firstName;
-	cout << "\nEnter second name: ";
+	cout << "Enter second name: ";
 	cin >> secondName;
-	cout << "\nEnter third name: ";
+	cout << "Enter third name: ";
 	cin >> thirdName;
 	for (int i = 0; i < ccounter; i++)
 	{
-		if (book[i].getFirstName() == firstName && book[i].getSecondName() == secondName && book[i].getThirdName() == thirdName)
+		if (strcmp(firstName, book[i].getFirstName()) == 0 && strcmp(secondName, book[i].getSecondName()) == 0 && strcmp(thirdName, book[i].getThirdName()) == 0)
 		{
 			book[i].printContact();
 		}
 	}
+	system("pause");
 	system("CLS");
 	return;
 }
